@@ -10,7 +10,7 @@ const app = express()
 // Connect to MongoDB Atlas
 mongoose
   .connect(
-    'mongodb+srv://sanskarmathur5:formfill@cluster0.j78n3vq.mongodb.net/formfill',
+    process.env.MongoDB_cred,
   )
   .then(() => {
     console.log('Connected to MongoDB Atlas')
